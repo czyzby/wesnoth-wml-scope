@@ -1,0 +1,22 @@
+name: 'WML Scope'
+description: 'Runs the wmlscope tool to verify project resources.'
+inputs:
+  path:
+    description: 'Path to file or directory that should be validated.'
+    required: true
+    default: .
+  wesnoth-version:
+    description: 'Wesnoth repository branch or tag to check against.'
+    required: false
+    default: master
+  flags:
+    description: 'Command line flags passed to the wmlscope tool.'
+    required: true
+    default: -u
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
+    - ${{ inputs.wesnoth-version }}
+    - ${{ inputs.flags }}
