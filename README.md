@@ -1,4 +1,4 @@
-# Wesnoth Image Optimizer
+# WML Scope Checker
 
 A GitHub Action for [Wesnoth](https://www.wesnoth.org/) add-ons.
 Verifies project resources using the `wmlscope` tool from a partially
